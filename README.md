@@ -58,7 +58,7 @@ The column that will used for sorting by default can be denoted by `sort_column:
 	]
 ```
 
-Data can also e given in the form of:
+Data can also be given in the form of:
 
 ```javascript
 	[
