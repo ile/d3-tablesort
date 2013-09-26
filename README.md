@@ -14,6 +14,8 @@ Sortable, scrollable table for D3
 
 ### JavaScript
 
+Creating the table:
+
 ```javascript
     TableSort(
         table_id,
