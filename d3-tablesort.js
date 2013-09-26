@@ -35,8 +35,6 @@
             tbody,
             rows;
 
-        outerTable = ((typeof table === 'string')? d3.select(table): table).html(null).append("table").attr("style", "width:" + dim.w);
-
         function sort(d, tmp, i) {
             var sort,
                 sort_btn = d3.select(d3.event.toElement),
@@ -48,6 +46,7 @@
             tbody.selectAll("tr").sort(function(a, b) { return d.sort(isArray(a)? a[sort_column]: a.data[sort_column], isArray(b)? b[sort_column]: b.data[sort_column], sort_order); } );
         }
 
+        outerTable = ((typeof table === 'string')? d3.select(table): table).html(null).append("table").attr("style", "width:" + dim.w);
         outerTable
             .append("tr")
             .append("td")
