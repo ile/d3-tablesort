@@ -27,7 +27,7 @@ Creating the table:
 
 #### table id
 
-This should be a string like `#my_table`.
+This should be a string like `"#my_table"`.
 
 #### array of columns
 
