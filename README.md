@@ -25,7 +25,11 @@ Creating the table:
         );
 ```
 
-#### Array of columns
+#### table id
+
+This should be a string like `#my_table`.
+
+#### array of columns
 
 *Array of columns* should be in the form of array of objects:
 
@@ -43,7 +47,7 @@ In the object a sorting function can be used if sorting wants to be enabled for 
 
 The column that will used for sorting by default can be denoted by `sort_column: true` property.
 
-#### Array of data
+#### array of data
 
 *Array of data* should be in the form of nested arrays. These should correspond to the array of columns, ie. the first item in the array (index 0) should correspond to index 0 in *array of columns*.
 
@@ -72,6 +76,14 @@ Data can also be given in the form of:
 ```
 
 .. where attributes will be set to each row (`<tr>`). For example, you can bind datasets (e.g. `data-id`) to each row this way.
+
+#### dimensions
+
+For example:
+
+```javascript
+{ width: '400px', height: '700px' }
+```
 
 ### Example output
 
