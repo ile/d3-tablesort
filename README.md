@@ -1,7 +1,7 @@
 d3-tablesort
 ============
 
-Sortable, scrollable table for D3
+Sortable, scrollable table for [D3](http://d3js.org/).
 
 ## Usage
 
