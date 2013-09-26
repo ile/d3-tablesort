@@ -92,4 +92,4 @@ For example:
 
 ## Credits
 
-Inspired by: [http://devforrest.com/examples/table/table.php](http://devforrest.com/examples/table/table.php)
+Inspired by, and initial code by: [http://devforrest.com/examples/table/table.php](http://devforrest.com/examples/table/table.php)
