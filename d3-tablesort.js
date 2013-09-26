@@ -78,7 +78,7 @@
             if (isObject(obj)) {
                 for (var i in obj) {
                     if (i !== 'data') {
-                        this[i] = obj[i];
+                        this.setAttribute(i, obj[i]);
                     }
                 }
             }
