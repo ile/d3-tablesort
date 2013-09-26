@@ -27,7 +27,7 @@ Creating the table:
 
 #### Array of columns
 
-Array of columns should be in the form of array of objects:
+*Array of columns* should be in the form of array of objects:
 
 ```javascript
     [
