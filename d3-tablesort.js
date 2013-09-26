@@ -10,6 +10,7 @@
     var sort_column = -1,
         sort_order = 1;
 
+    // utility functions. does d3 ave these?
     var isArray = Array.isArray || function(arr) {
             return toString.call(arr) == '[object Array]';
         };
