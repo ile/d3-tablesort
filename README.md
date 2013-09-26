@@ -58,6 +58,21 @@ The column that will used for sorting by default can be denoted by `sort_column:
 	]
 ```
 
+Data can also e given in the form of:
+
+```javascript
+	[
+		{ attribute1: '...', attribute2: '...', attributeN: '...', data: [ 'Rautavaara', '99.73 %' ] },
+		{ attribute1: '...', attribute2: '...', attributeN: '...', data: [ 'Pelkosenniemi', '99.69 %' ] },
+		{ attribute1: '...', attribute2: '...', attributeN: '...', data: [ 'Kiikoinen', '99.68 %' ] },
+		{ attribute1: '...', attribute2: '...', attributeN: '...', data: [ 'Luhanka', '99.63 %' ] },
+		{ attribute1: '...', attribute2: '...', attributeN: '...', data: [ 'Reisjärvi', '99.6 %' ] },
+		{ attribute1: '...', attribute2: '...', attributeN: '...', data: [ 'Savukoski', '99.57 %' ] }
+	]
+```
+
+.. where attributes will be set to each row (`<tr>`). For example, you can bind datasets (e.g. `data-id`) to each row this way.
+
 ### Example output
 
 ![image](https://f.cloud.github.com/assets/433707/1214836/72cb2996-264c-11e3-8d98-50e671631df5.png)

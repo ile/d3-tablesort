@@ -10,6 +10,14 @@
     var sort_column = -1,
         sort_order = 1;
 
+    var isArray = Array.isArray || function(arr) {
+            return toString.call(arr) == '[object Array]';
+        };
+
+    var isObject = function(a) {
+        return (!!a) && (a.constructor === Object);
+    };
+
     globals.TableSort = function(table, columns, data, dimensions) {
 
         dimensions = dimensions || { width: '500px', height: '300px' };
@@ -37,7 +45,7 @@
             sort_order = sort_order * -1;
             sort_btn.classed('sort_desc', !is_desc).classed('sort_asc', is_desc);
             sort_column = i;
-            tbody.selectAll("tr").sort(function(a, b) { return d.sort(a[sort_column], b[sort_column], sort_order); } );
+            tbody.selectAll("tr").sort(function(a, b) { return d.sort(isArray(a)? a[sort_column]: a.data[sort_column], isArray(b)? b[sort_column]: b.data[sort_column], sort_order); } );
         }
 
         outerTable
@@ -64,14 +72,27 @@
         // Create a row for each object in the data and perform an intial sort.
         rows = tbody.selectAll("tr").data(data).enter().append("tr");
 
-        // initial sort if wanted
+        // set element attributes if data is given in the form of data = [ { ..., data: []}, { ..., data: []}, { ..., data: []}, { ..., data: []} ]
+        // where '...' stands for attributes to set
+        rows.datum(function(obj) {
+            if (isObject(obj)) {
+                for (var i in obj) {
+                    if (i !== 'data') {
+                        this[i] = obj[i];
+                    }
+                }
+            }
+            return obj;
+        })
+
+        // initial sort
         if (sort_column >= 0 && columns[sort_column].sort) {
-            tbody.selectAll('tr').sort(function(a, b) { return columns[sort_column].sort(a[sort_column], b[sort_column], sort_order); })
+            tbody.selectAll('tr').sort(function(a, b) { return columns[sort_column].sort(isArray(a)? a[sort_column]: a.data[sort_column], isArray(b)? b[sort_column]: b.data[sort_column], sort_order); })
         }
 
         // Create a cell in each row for each column
         rows.selectAll("td")
-            .data(function (d) { return d; }).enter()
+            .data(function (d) { return isArray(d)? d: d.data; }).enter()
             .append("td")
     		.text(function (d) { return d; });
 
