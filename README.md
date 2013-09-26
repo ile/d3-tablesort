@@ -75,7 +75,7 @@ Data can also be given in the form of:
 	]
 ```
 
-.. where attributes will be set to each row (`<tr>`). For example, you can bind datasets (e.g. `data-id`) to each row this way.
+.. where attributes will be set to each row (`<tr>`). For example, you can bind [datasets](http://www.w3.org/TR/2011/WD-html5-20110113/elements.html) (e.g. `data-id`) to each row this way.
 
 #### dimensions
 
