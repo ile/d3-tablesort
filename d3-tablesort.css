@@ -37,10 +37,10 @@
     overflow: auto;
 }
 
-#municipalities tbody tr:nth-child(odd) {
+.body-table tr:nth-child(odd) {
     background: #f3f6f9;
 }
 
-#municipalities tbody tr:nth-child(even) {
+.body-table tr:nth-child(even) {
     background: #fff;
 }
