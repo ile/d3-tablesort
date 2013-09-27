@@ -3,6 +3,10 @@ d3-tablesort
 
 Sortable, scrollable table for [D3](http://d3js.org/).
 
+## Install
+
+Download the css and js files or do `bower install d3-tablesort`.
+
 ## Usage
 
 ### HTML
