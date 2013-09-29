@@ -3,6 +3,8 @@ d3-tablesort
 
 Sortable, scrollable table for [D3](http://d3js.org/).
 
+![image](https://f.cloud.github.com/assets/433707/1214836/72cb2996-264c-11e3-8d98-50e671631df5.png)
+
 ## Install
 
 Download the css and js files or do `bower install d3-tablesort`.
@@ -88,11 +90,6 @@ For example:
 ```javascript
 { width: '400px', height: '700px' }
 ```
-
-### Example output
-
-![image](https://f.cloud.github.com/assets/433707/1214836/72cb2996-264c-11e3-8d98-50e671631df5.png)
-
 
 ## Credits
 
