@@ -38,7 +38,7 @@
 
         function sort(d, tmp, i) {
             var sort,
-                sort_btn = d3.select(d3.event.toElement),
+                sort_btn = d3.select(d3.event.toElement || d3.event.target),
                 is_desc = sort_btn.classed('sort_desc');
 
             sort_order = sort_order * -1;
