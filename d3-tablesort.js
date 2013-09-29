@@ -7,8 +7,8 @@
 
 (function(globals) {
 
-    var sort_column = -1,
-        sort_order = 1;
+    var sort_column = -1, // don't sort any column by default
+        sort_order = 1; // desc
 
     // utility functions. does d3 have these?
     var isArray = Array.isArray || function(arr) {
@@ -41,7 +41,7 @@
                 sort_btn = d3.select(d3.event.toElement || d3.event.target),
                 is_desc = sort_btn.classed('sort_desc');
 
-            sort_order = sort_order * -1;
+            sort_order = is_desc? -1: 1;
             sort_btn.classed('sort_desc', !is_desc).classed('sort_asc', is_desc);
             sort_column = i;
             tbody.selectAll("tr").sort(function(a, b) { return d.sort(isArray(a)? a[sort_column]: a.data[sort_column], isArray(b)? b[sort_column]: b.data[sort_column], sort_order); } );
